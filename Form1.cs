@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace WhatsRead
 {
-    public partial class Form1 : Form
+    public partial class WhatsReader : Form
     {
-        public Form1()
+        public WhatsReader()
         {
             InitializeComponent();
+            //escriu línia a línia el text de l'array
+            foreach (string linia in Program.textarxiu)
+            {
+                tbsortida.Text += linia + "\r\n" ;
+               
+            }
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

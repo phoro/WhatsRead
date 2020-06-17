@@ -1,6 +1,6 @@
 ﻿namespace WhatsRead
 {
-    partial class Form1
+    partial class WhatsReader
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tbsortida = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // tbsortida
+            // 
+            this.tbsortida.Location = new System.Drawing.Point(12, 12);
+            this.tbsortida.Multiline = true;
+            this.tbsortida.Name = "tbsortida";
+            this.tbsortida.Size = new System.Drawing.Size(329, 146);
+            this.tbsortida.TabIndex = 0;
+            this.tbsortida.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // WhatsReader
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.tbsortida);
+            this.Name = "WhatsReader";
+            this.Text = "WhatsReader";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox tbsortida;
     }
 }
 
