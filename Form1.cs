@@ -15,18 +15,30 @@ namespace WhatsRead
         public WhatsReader()
         {
             InitializeComponent();
-            //escriu línia a línia el text de l'array
-            foreach (string linia in Program.textarxiu)
-            {
-                tbsortida.Text += linia + "\r\n" ;
-               
-            }
+                
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        //escriu línia a línia el text de l'array
+        private void Escriutext()
         {
-            
+            foreach (string linia in Program.textarxiu)
+            {
+                tbsortida.Text += linia + "\r\n";
+
+            }
+
+        }
+
+        private void Bt_Click(object sender, EventArgs e)
+        {
+            Program.Llegeix();
+            Escriutext();
+
         }
     }
 }

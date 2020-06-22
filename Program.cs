@@ -14,7 +14,7 @@ namespace WhatsRead
         /// Punto de entrada principal para la aplicación.
         /// 
         /// </summary>
-        public static string provaForm = "Aquí el text";
+        
         // array per desar el text
         public static string[] textarxiu = { "text","array"};
         [STAThread]
@@ -23,19 +23,23 @@ namespace WhatsRead
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new WhatsReader());
+                      
+            
             Llegeix();
         }
-        static void Llegeix()
+        public static void Llegeix()
         {
-                       
+        
             try
             {   // Obre l'arxiu de text .
                 StreamReader lector = new StreamReader("text.txt");
                
                 {
-                    // Read the stream to a string, and write the string to the console.
+                    // Read the stream to a string.
                     string line = lector.ReadToEnd();
-                    Console.WriteLine(line);
+                    textarxiu[0] = line;
+                    Console.WriteLine("****************provant***************");
+                    Console.WriteLine(textarxiu[0]);
                 }
             }
             catch (IOException e)
